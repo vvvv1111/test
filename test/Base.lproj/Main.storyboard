@@ -1,24 +1,305 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="way-VO-98J">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--UNITBEAN.NEWS-->
+        <scene sceneID="dUw-75-6dX">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <collectionViewController id="MQJ-Pn-LdU" customClass="CollectionViewController" customModule="test" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="AZ3-Cq-kZh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="36" minimumInteritemSpacing="0.0" id="1BE-kP-IC9">
+                            <size key="itemSize" width="343" height="280"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="50" height="50"/>
+                            <inset key="sectionInset" minX="8" minY="16" maxX="8" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="tqM-Pa-E19" customClass="CollectionViewCell" customModule="test" customModuleProvider="target">
+                                <rect key="frame" x="16" y="16" width="343" height="280"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="TWj-fL-gk5">
+                                    <rect key="frame" x="0.0" y="0.0" width="343" height="280"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hlQ-wo-hdm">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="195"/>
+                                            <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="195" id="FBQ-go-Kfz"/>
+                                                <constraint firstAttribute="width" constant="343" id="h7R-u1-LER"/>
+                                            </constraints>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PJ7-lm-Ytf">
+                                            <rect key="frame" x="0.0" y="262" width="114" height="17"/>
+                                            <attributedString key="attributedText">
+                                                <fragment content="Татьяна Боброва">
+                                                    <attributes>
+                                                        <font key="NSFont" size="14" name="PTRootUIWeb-Medium"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NEE-PM-dUr">
+                                            <rect key="frame" x="122" y="262" width="95" height="17"/>
+                                            <attributedString key="attributedText">
+                                                <fragment content="28 мая в 12:05">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.49019607843137253" green="0.49019607843137253" blue="0.49019607843137253" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <font key="NSFont" size="14" name="PTRootUIWeb-Medium"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7rp-hK-l5Q">
+                                            <rect key="frame" x="0.0" y="205" width="343" height="47"/>
+                                            <attributedString key="attributedText">
+                                                <fragment content="Google Camera — хайп или замена зеркалки">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="0.84706000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <font key="NSFont" size="20" name="PTRootUIWeb-Medium"/>
+                                                        <real key="NSKern" value="0.0"/>
+                                                        <font key="NSOriginalFont" size="12" name="PTRootUIWeb-Medium"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                            <tabStops/>
+                                                        </paragraphStyle>
+                                                        <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Shape2" translatesAutoresizingMaskIntoConstraints="NO" id="DzY-q9-YYD">
+                                            <rect key="frame" x="245" y="260" width="21" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="20" id="Kpu-JS-EhV"/>
+                                                <constraint firstAttribute="width" constant="21" id="pQK-xu-cAb"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gXU-ms-pGX">
+                                            <rect key="frame" x="270" y="262" width="8" height="17"/>
+                                            <attributedString key="attributedText">
+                                                <fragment content="3">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.49019607843137253" green="0.49019607843137253" blue="0.49019607843137253" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <font key="NSFont" size="14" name="PTRootUIWeb-Medium"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="NEE-PM-dUr" firstAttribute="leading" secondItem="PJ7-lm-Ytf" secondAttribute="trailing" constant="8" id="B4H-Vk-7W1"/>
+                                        <constraint firstItem="gXU-ms-pGX" firstAttribute="leading" secondItem="DzY-q9-YYD" secondAttribute="trailing" constant="4" id="BLQ-aP-ASX"/>
+                                        <constraint firstAttribute="bottom" secondItem="gXU-ms-pGX" secondAttribute="bottom" constant="1" id="Boh-Yk-7Wp"/>
+                                        <constraint firstAttribute="trailing" secondItem="hlQ-wo-hdm" secondAttribute="trailing" id="F4B-Wf-MEC"/>
+                                        <constraint firstItem="DzY-q9-YYD" firstAttribute="leading" secondItem="NEE-PM-dUr" secondAttribute="trailing" constant="28" id="FQi-42-Nao"/>
+                                        <constraint firstItem="PJ7-lm-Ytf" firstAttribute="leading" secondItem="TWj-fL-gk5" secondAttribute="leading" id="WTM-yd-qZe"/>
+                                        <constraint firstAttribute="trailing" secondItem="7rp-hK-l5Q" secondAttribute="trailing" id="XDf-Ou-g2H"/>
+                                        <constraint firstAttribute="bottom" secondItem="PJ7-lm-Ytf" secondAttribute="bottom" constant="1" id="c6Q-ap-Ept"/>
+                                        <constraint firstItem="7rp-hK-l5Q" firstAttribute="top" secondItem="hlQ-wo-hdm" secondAttribute="bottom" constant="10" id="ckT-CY-znX"/>
+                                        <constraint firstItem="hlQ-wo-hdm" firstAttribute="top" secondItem="TWj-fL-gk5" secondAttribute="top" id="dYH-jL-7So"/>
+                                        <constraint firstAttribute="bottom" secondItem="NEE-PM-dUr" secondAttribute="bottom" constant="1" id="kjO-Ul-reA"/>
+                                        <constraint firstItem="PJ7-lm-Ytf" firstAttribute="top" secondItem="7rp-hK-l5Q" secondAttribute="bottom" constant="10" id="p1u-Ab-mC2"/>
+                                        <constraint firstAttribute="bottom" secondItem="DzY-q9-YYD" secondAttribute="bottom" id="uF2-ib-ZHo"/>
+                                        <constraint firstItem="hlQ-wo-hdm" firstAttribute="leading" secondItem="TWj-fL-gk5" secondAttribute="leading" id="wdZ-no-pSU"/>
+                                        <constraint firstItem="7rp-hK-l5Q" firstAttribute="leading" secondItem="TWj-fL-gk5" secondAttribute="leading" id="yo4-p8-Yly"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <size key="customSize" width="343" height="280"/>
+                                <connections>
+                                    <outlet property="authorOfPost" destination="PJ7-lm-Ytf" id="RNm-u5-YuC"/>
+                                    <outlet property="dateOfPost" destination="NEE-PM-dUr" id="kPx-c7-G4Q"/>
+                                    <outlet property="numberOfComments" destination="gXU-ms-pGX" id="R2q-99-3Ec"/>
+                                    <outlet property="shape" destination="DzY-q9-YYD" id="Q2M-Io-ig9"/>
+                                    <outlet property="titleOfPost" destination="7rp-hK-l5Q" id="Nt8-Zs-Cwi"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="CartFooterCollectionReusableView" id="FFG-yA-VUf">
+                            <rect key="frame" x="0.0" y="296" width="375" height="50"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d1U-Rr-Lqf">
+                                    <rect key="frame" x="104.5" y="7" width="166" height="36"/>
+                                    <state key="normal">
+                                        <attributedString key="attributedTitle">
+                                            <fragment content="ЗАГРУЗИТЬ ЕЩЕ">
+                                                <attributes>
+                                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                    <font key="NSFont" size="20" name="PTRootUIWeb-Regular"/>
+                                                    <font key="NSOriginalFont" size="17" name="PTRootUIWeb-Regular"/>
+                                                    <integer key="NSUnderline" value="1"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                    </state>
+                                    <connections>
+                                        <action selector="loadMoreButton:" destination="MQJ-Pn-LdU" eventType="touchUpInside" id="bRd-Pk-exk"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="d1U-Rr-Lqf" firstAttribute="centerY" secondItem="FFG-yA-VUf" secondAttribute="centerY" id="069-I2-yqk"/>
+                                <constraint firstItem="d1U-Rr-Lqf" firstAttribute="centerX" secondItem="FFG-yA-VUf" secondAttribute="centerX" id="mYT-36-eAX"/>
+                            </constraints>
+                        </collectionReusableView>
+                        <connections>
+                            <outlet property="dataSource" destination="MQJ-Pn-LdU" id="EtC-pK-SyE"/>
+                            <outlet property="delegate" destination="MQJ-Pn-LdU" id="J2S-aP-QIU"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="UNITBEAN.NEWS" id="KpS-Qp-6HD"/>
+                    <connections>
+                        <segue destination="bvT-NN-h2P" kind="show" identifier="toPost" id="5QO-5a-ziS"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nyx-1U-sqa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="920.79999999999995" y="102.09895052473765"/>
+        </scene>
+        <!--Статья-->
+        <scene sceneID="1gJ-RO-yPK">
+            <objects>
+                <viewController id="bvT-NN-h2P" customClass="ViewController" customModule="test" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tLz-l8-4YB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="COr-SL-I3n">
+                                <rect key="frame" x="16" y="60" width="114" height="17"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Татьяна Боброва">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="PTRootUIWeb-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gRP-BE-MTE">
+                                <rect key="frame" x="138" y="60" width="95" height="17"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="28 мая в 12:05">
+                                        <attributes>
+                                            <color key="NSColor" red="0.49019607843137253" green="0.49019607843137253" blue="0.49019607843137253" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="PTRootUIWeb-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kwy-Dd-2oT">
+                                <rect key="frame" x="16" y="85" width="343" height="65.5"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Google Camera — хайп или замена зеркалки">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="0.84706000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="28" name="PTRootUIWeb-Medium"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <font key="NSOriginalFont" size="12" name="PTRootUIWeb-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KCd-FO-MMn">
+                                <rect key="frame" x="16" y="170" width="343" height="223"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="223" id="9b2-6Z-e48"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rqo-uU-q6A">
+                                <rect key="frame" x="16" y="401" width="343" height="19"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Google Camera — хайп или замена зеркалки">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="0.84706000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="16" name="PTRootUIWeb-Medium"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <font key="NSOriginalFont" size="12" name="PTRootUIWeb-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="45T-rC-2l5" firstAttribute="trailing" secondItem="gRP-BE-MTE" secondAttribute="trailing" constant="142" id="2Hc-q4-zQL"/>
+                            <constraint firstItem="gRP-BE-MTE" firstAttribute="leading" secondItem="COr-SL-I3n" secondAttribute="trailing" constant="8" id="5lC-LR-lY5"/>
+                            <constraint firstItem="45T-rC-2l5" firstAttribute="trailing" secondItem="kwy-Dd-2oT" secondAttribute="trailing" constant="16" id="Dqn-Oa-m0y"/>
+                            <constraint firstItem="COr-SL-I3n" firstAttribute="top" secondItem="45T-rC-2l5" secondAttribute="top" constant="16" id="FIG-uw-aci"/>
+                            <constraint firstItem="KCd-FO-MMn" firstAttribute="leading" secondItem="45T-rC-2l5" secondAttribute="leading" constant="16" id="LOy-2q-pge"/>
+                            <constraint firstItem="45T-rC-2l5" firstAttribute="trailing" secondItem="KCd-FO-MMn" secondAttribute="trailing" constant="16" id="Lfz-NF-iPQ"/>
+                            <constraint firstItem="kwy-Dd-2oT" firstAttribute="leading" secondItem="45T-rC-2l5" secondAttribute="leading" constant="16" id="LxN-9d-GIk"/>
+                            <constraint firstItem="KCd-FO-MMn" firstAttribute="top" secondItem="kwy-Dd-2oT" secondAttribute="bottom" constant="19.5" id="TAd-Jy-lOe"/>
+                            <constraint firstItem="rqo-uU-q6A" firstAttribute="top" secondItem="KCd-FO-MMn" secondAttribute="bottom" constant="8" id="Us8-uF-6ZO"/>
+                            <constraint firstItem="45T-rC-2l5" firstAttribute="trailing" secondItem="rqo-uU-q6A" secondAttribute="trailing" constant="16" id="YX2-Lw-OjD"/>
+                            <constraint firstItem="rqo-uU-q6A" firstAttribute="leading" secondItem="45T-rC-2l5" secondAttribute="leading" constant="16" id="h59-pl-cNS"/>
+                            <constraint firstItem="KCd-FO-MMn" firstAttribute="top" secondItem="kwy-Dd-2oT" secondAttribute="bottom" constant="19.5" id="hxO-nW-sRY"/>
+                            <constraint firstItem="rqo-uU-q6A" firstAttribute="top" secondItem="KCd-FO-MMn" secondAttribute="bottom" constant="8" id="qwJ-oo-3EX"/>
+                            <constraint firstItem="COr-SL-I3n" firstAttribute="leading" secondItem="45T-rC-2l5" secondAttribute="leading" constant="16" id="wAv-LP-Xe7"/>
+                            <constraint firstItem="kwy-Dd-2oT" firstAttribute="top" secondItem="COr-SL-I3n" secondAttribute="bottom" constant="8" id="xQa-rV-HBV"/>
+                            <constraint firstItem="gRP-BE-MTE" firstAttribute="top" secondItem="45T-rC-2l5" secondAttribute="top" constant="16" id="zjb-CK-w2E"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="45T-rC-2l5"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Статья" id="2Bw-pe-EB7"/>
+                    <connections>
+                        <outlet property="bodyOfPost" destination="rqo-uU-q6A" id="AJ4-K7-glt"/>
+                        <outlet property="titleOfPost" destination="kwy-Dd-2oT" id="81T-dK-Fl7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4HJ-5A-T8V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1821.5999999999999" y="101.19940029985008"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="lIE-kq-pWw">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="way-VO-98J" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FeD-jX-IqJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="MQJ-Pn-LdU" kind="relationship" relationship="rootViewController" id="lKW-Zk-DVp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w82-7e-Djt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-18.399999999999999" y="102.09895052473765"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Shape2" width="84" height="78"/>
+    </resources>
 </document>

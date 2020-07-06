@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  test
+//  zadanie
 //
-//  Created by Vladimir on 06.07.2020.
+//  Created by Vladimir on 04.07.2020.
 //  Copyright © 2020 Vladimir. All rights reserved.
 //
 
